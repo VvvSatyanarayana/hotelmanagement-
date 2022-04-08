@@ -1,0 +1,44 @@
+<h1 class="bg-primary text-white">HOTEL BOOKING</h1>
+<div>
+  
+
+  <form class="form-inline">
+    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">ONLINE BOOKING:</label>
+    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+      <option selected>Choose...</option>
+      <option value="1">Credit card</option>
+      <option value="2">Bank transfer</option>
+    </select>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">CARD NUMBER</label>
+      <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="enter your number">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"> CARDHOLDER NAME</label>
+      <input type="string" class="form-control" id="exampleFormControlInput1" placeholder="enter your  name">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">EXPIRY DATE</label>
+      <input type="date" id="expiryday" name="expiryday">
+    </div>
+      <br>
+      <br>
+    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">RESERVATION</label>
+    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+<div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">FIRST NAME</label>
+        <input type="firstname" class="form-control" id="exampleFormControlInput1" placeholder="enter your fistname">
+      </div>
+      
+    </select>
+    <br>
+    <br>
+    <div class="custom-control custom-checkbox my-1 mr-sm-2">
+      <input type="checkbox" class="custom-control-input" id="customControlInline">
+      <label class="custom-control-label" for="customControlInline">Remember my preference</label>
+    </div>
+  
+    <button type="booking" class="btn btn-primary my-1">Booking</button>
+    <button type="button" onclick="alert('Booking is successfull')">Click Me!</button>
+  </form>
+</div>

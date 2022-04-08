@@ -1,0 +1,37 @@
+<h2 style="text-align: center; background-color: aquamarine;">{{title}}</h2>
+<html lang="en">
+<head>
+    <style>
+        header{
+            background-color: rgb(208, 100, 100);
+            color: white;
+        }
+        footer{
+            background-color: aquamarine;
+            color: rgb(160, 68, 68);
+        }
+       
+    </style>    
+</head>
+
+<body>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">CARD NUMBER</label>
+    <input type="string" class="form-control" id="exampleFormControlInput1" placeholder="enter your card number">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"> CVV</label>
+    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="enter card cvv">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">EXPIRY DATE</label>
+    <input type="string" class="form-control" id="exampleFormControlInput1" placeholder="enter card expiry date ">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"> PIN</label>
+    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="enter your pin">
+  </div>
+  <p id="demo"></p>
+  
+  <button type="button" onclick='document.getElementById("demo").innerHTML = "CONTINUE TO PAY"'>PROCEED</button>
+</body>

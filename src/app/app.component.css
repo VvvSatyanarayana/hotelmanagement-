@@ -1,0 +1,45 @@
+h1{
+    background-color: rgb(138, 246, 246);
+    color: rgb(9, 9, 9);
+    text-align: center;
+    font-size: 50px;
+    padding: 5px;
+}
+
+    
+
+body{
+    background-image: url("https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2016/10/17/1755/Hyatt-Amritsar-P001-Exterior.jpg/Hyatt-Amritsar-P001-Exterior.16x9.jpg?imwidth=1920");
+    height: 100vh;
+    background-size: cover;
+   
+    color: aliceblue;
+    margin-right: 10px;
+}
+.navbar-nav{
+    
+    margin-left: 50px;
+    padding: 5px;
+
+    
+
+}
+.b1{
+    margin-right: 20px;
+}
+.b2{
+    margin-right: 20px;
+}
+.b3{
+    margin-right: 20px;
+}
+.b4{
+    margin-right: 20px;
+}
+.b5{
+    margin-right: 20px;
+}
+
+.b6{
+    margin-right: 10px;
+}
