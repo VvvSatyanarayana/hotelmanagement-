@@ -1,0 +1,29 @@
+
+<div class="form-box">
+<form action="reservation.php" method="post">
+  <div class="elem-group">
+    <p>REGISTER</p>
+    <label for="name"></label>
+    <input type="name" class='submit'  id="name" formControlName="name" name="visitor_name" placeholder="Enter your name" ErrorMessage="Your name should be minimum 8 charecters" pattern=[A-Z\sa-z]{3,20} required>
+    
+  </div><br>
+  <div class="elem-group">
+    <label for="email"></label>
+    <input type="email" class='submit' id="email" name="visitor_email" placeholder="Enter your mail" required>
+  </div><br>
+  <div class="elem-group">
+    <label for="password"></label>
+    <input type="password" class='submit' id="password" name="password" placeholder="Enter your password" required>
+  </div><br>
+  <div class="elem-group">
+    <label for="address"></label>
+    <input type="address" class='submit' id="address" name="address" placeholder="Enter your address" required>
+  </div><br>
+  <div class="elem-group">
+    <label for="phone"></label>
+    <input type="tel" id="phone" class='submit' name="visitor_phone" placeholder="Enter your mobile  number" pattern="^\d{3}-\d{3}-\d{4}$" required>
+  </div><br>
+    
+  <button type="submit" class='submit-btn'>REGISTER</button>
+</form>
+</div>

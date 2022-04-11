@@ -1,0 +1,52 @@
+<div class="form-box">
+<div class='button-box'>
+  <div id='btn'></div>
+  <button type='button'onclick='login()'class='toggle-btn'>Log In</button><br>
+  
+</div>
+
+<form id='login' class='input-group-login'>
+  <input type='text'class='input-field'placeholder='Email Id' required ><br><br>
+<br><input type='password'class='input-field'placeholder='Enter Password' required><br><br>
+<input type='checkbox'class='check-box'><span>Remember Password</span><br><br>
+<button type='submit'   routerLink="dash-board" class='submit-btn'>Log In</button>
+</form>
+</div>
+
+
+<div>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+    </div>
+    </div>
+  </nav>
+ 
+  <br/>
+
+
+  <div class="r">
+  <router-outlet></router-outlet></div>  
+  </body>
+  </div>
+
+
+
+
+
+
+
+<script>
+  var x=document.getElementById('login');
+  function login()
+		{
+			x.style.left='50px';
+    }
+	</script>
+  

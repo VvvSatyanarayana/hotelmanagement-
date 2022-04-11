@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BookingComponent } from './booking/booking.component';
-import { CustomerComponent } from './customer/customer.component';
-import { HotelOperationsComponent } from './hotel-operations/hotel-operations.component';
+
+
 import { PaymentComponent } from './payment/payment.component';
 import { RoomsComponent } from './rooms/rooms.component';
-import { ServiceComponent } from './service/service.component';
+
+import { LoginComponent } from './login/login.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { RegisterComponent } from './register/register.component';
+import { DashBoardComponent } from './dash-board/dash-board.component';
 
 import { AppComponent } from './app.component';
 
@@ -13,12 +17,17 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {path:"booking",component:BookingComponent},
-  {path:"customer",component:CustomerComponent},
-  {path:"hotel-operations",component:HotelOperationsComponent},
+  
+
   {path:"payment",component:PaymentComponent},
   {path:"rooms",component:RoomsComponent},
-  {path:"services",component:ServiceComponent},
+
   {path:'',redirectTo:'/home',pathMatch:'full'},
+
+  {path:"login",component:LoginComponent},
+  {path:"about-us",component:AboutUsComponent},
+  {path:"register",component:RegisterComponent},
+  {path:"dash-board",component:DashBoardComponent}
  
 ];
 
