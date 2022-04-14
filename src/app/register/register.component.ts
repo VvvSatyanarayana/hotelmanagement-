@@ -1,39 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Directive } from '@angular/core';
 import{FormGroup,Validators,FormControl}from '@angular/forms';
+
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent  {
 
   title = 'REGISTER PAGE';
-  registrationform:FormGroup;
-  fname:string;
-  lname:string;
-  email:string;
-  mob:number;
-  gen:string;
-  add:string;
-  npsw:string;
-  cpsw:string;
-
+  registerform:FormGroup;
+  failMessage:string;
+  myform: FormGroup;
   constructor() { 
-    this.registrationform=new FormGroup({
-      firstname:new FormControl("",[Validators.required]),
-      lastname:new FormControl("",[Validators.required]),
-      emailid:new FormControl("",[Validators.required]),
-      mobilenumber:new FormControl("",[Validators.required,Validators.pattern('([789]{1}\\d{9})')]),
-      gender:new FormControl("",[Validators.required]),
-      address:new FormControl("",[Validators.required]),
-      newpassword:new FormControl("",[Validators.required,Validators.minLength(8),Validators.pattern('[a-zA-Z0-9]')]),
-      confirmpassword:new FormControl("",[Validators.required]),
+    this.myform=new FormGroup({
+      name:new FormControl("",[Validators.required]),
+      
+      email:new FormControl("",[Validators.required]),
+      mobile:new FormControl("",[Validators.required,Validators.pattern('([789]{1}\\d{9})')]),
+      password:new FormControl("",[Validators.required,Validators.minLength(8)]),
+  
 
     });
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  get name(){
+    return this.myform.get('name');
   }
+  get email(){
+    return this.myform.get('email');
+  }
+  get mobile(){
+    return this.myform.get('mobile');
+  }
+   get password(){
+     return this.myform.get('password');
+   }
 
   
 

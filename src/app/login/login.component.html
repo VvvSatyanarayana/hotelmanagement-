@@ -1,52 +1,29 @@
+<div class="image">
 <div class="form-box">
-<div class='button-box'>
-  <div id='btn'></div>
-  <button type='button'onclick='login()'class='toggle-btn'>Log In</button><br>
-  
-</div>
-
-<form id='login' class='input-group-login'>
-  <input type='text'class='input-field'placeholder='Email Id' required ><br><br>
-<br><input type='password'class='input-field'placeholder='Enter Password' required><br><br>
-<input type='checkbox'class='check-box'><span>Remember Password</span><br><br>
-<button type='submit'   routerLink="dash-board" class='submit-btn'>Log In</button>
-</form>
-</div>
-
-
-<div>
-  <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-    </div>
-    </div>
-  </nav>
- 
-  <br/>
-
-
-  <div class="r">
-  <router-outlet></router-outlet></div>  
-  </body>
+  <h1>LOGIN</h1>
+<form [formGroup]="loginform" (ngSubmit)="mylogin()">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+    <div *ngIf="loginform.controls.email.touched && loginform.controls.email.invalid">
+      <small *ngIf="loginform.controls.email.errors.required" style="color:red">Email is Required</small>
+  </div>
+  </div>
+  <div class="form-group">
+    <br><label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" formControlName="pwd">
+    <div *ngIf="loginform.controls.pwd.touched && loginform.controls.pwd.invalid">
+      <small *ngIf="loginform.controls.pwd.errors.required" style="color:red">Password is Required</small>
+  </div>
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label><br>
   </div>
 
-
-
-
-
-
-
-<script>
-  var x=document.getElementById('login');
-  function login()
-		{
-			x.style.left='50px';
-    }
-	</script>
-  
+  <br><button type="submit" class="sucess">LOGIN</button>
+  <br>
+  <br><a style="color: rgb(18, 109, 4);" routerLink='../register'>New user! Click to register</a>
+</form>
+</div>
+</div>

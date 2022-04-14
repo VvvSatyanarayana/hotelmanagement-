@@ -1,9 +1,15 @@
-input[type=number], select {
-    width: 100%;
-    padding: 12px 2px;
-    margin: 9px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
+.form-box{
+  top: 100px;
+  width: 700px;
+  height: 860px;
+  position: relative;
+  margin:0% auto;
+  padding: 50px;
+  background-image: url(http://images.freecreatives.com/wp-content/uploads/2016/02/White-Glitter-Wallpaper-.jpg);
+}
+.image{
+  background-image: url(https://i2.cdn.turner.com/money/dam/assets/150720120419-club-lounge-fairmont-beijing-gold-room-1100x619.jpg);
+  background-size:cover;
+  height: 1000px;
+  padding: 0px;
+}

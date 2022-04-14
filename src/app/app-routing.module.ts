@@ -11,23 +11,27 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { RegisterComponent } from './register/register.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 
+
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 
 
 const routes: Routes = [
-  {path:"booking",component:BookingComponent},
-  
-
-  {path:"payment",component:PaymentComponent},
-  {path:"rooms",component:RoomsComponent},
-
+  {path:'home',component:HomeComponent},
+  {path:'login',component:LoginComponent},
+  {path:'register',component:RegisterComponent},
+  {path:'about',component:AboutUsComponent},
   {path:'',redirectTo:'/home',pathMatch:'full'},
+{path:'dashboard',component:DashBoardComponent,children:[
+  {path:'rooms',component:RoomsComponent},
+{path:'booking',component:BookingComponent},
+{path:'payment',component:PaymentComponent}
 
-  {path:"login",component:LoginComponent},
-  {path:"about-us",component:AboutUsComponent},
-  {path:"register",component:RegisterComponent},
-  {path:"dash-board",component:DashBoardComponent}
+]},
+
+
+
  
 ];
 

@@ -1,47 +1,15 @@
-header{
-    background-color: rgb(208, 100, 100);
-    color: white;
+.form-box{
+    top:100px;
+    width: 500px;
+    height: 700px;
+    position: relative;
+    margin:5% auto;
+    padding: 50px;
+    background-image: url(https://www.athletadesk.com/wp-content/uploads/2016/08/join-background.jpg);
 }
-footer{
-    background-color: aquamarine;
-    color: rgb(160, 68, 68);
-}
-body{
-    background-color:black;
-    color: cornsilk;
-}
-.form-box
-{
-    width:380px;
-	height:400px;
-	position:relative;
-	margin:2% auto;
-	background:rgba(21, 119, 247, 0.3);
-	padding:10px;
-    overflow: hidden;
-    background-image: url(https://wallpapercave.com/wp/E7N1CUS.jpg);
-}
-.submit
-{
-	width: 85%;
-	padding: 10px 30px;
-	cursor: pointer;
-	display: block;
-	margin: auto;
-	background: #F3C693;
-	border: 0;
-	outline: none;
-	border-radius: 30px;
-}
-.submit-btn
-{
-	width: 50%;
-	padding: 10px 30px;
-	cursor: pointer;
-	display: block;
-	margin: auto;
-	background: #e63f08;
-	border: 0;
-	outline: none;
-	border-radius: 30px;
-}
+  .image{
+    background-image: url(https://i2.cdn.turner.com/money/dam/assets/150720120419-club-lounge-fairmont-beijing-gold-room-1100x619.jpg);
+    background-size:cover;
+    height: 1000px;
+    padding: 0px;
+  }

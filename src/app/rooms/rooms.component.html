@@ -1,49 +1,60 @@
-<h1 class="bg-primary text-white">ROOMS</h1>
+<h2>HOTEL ROOMS</h2>
 <div>
+  <body>
+    <p>Total Number of Rooms = 100</p>
+
+    <div>
+    <p id="demo"></p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML ="Available Room is 50"'>AvailableRooms</button>
+      
+      </div>
+
+    <form #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit()" >
+      <div class="form-row">
+          <div class="col-md-2 mb-3">
+            <label>Room Number</label>
+            <input type="text" name="roomno" class="form-control" [(ngModel)]="room.roomNo" #roomno="ngModel"
+              [ngClass]="{ 'is-invalid': userForm.submitted && roomno.invalid }" required>
+              <div class="invalid-feedback" *ngIf="userForm.submitted && roomno.invalid">
+                <p *ngIf="roomno.errors.required">Room no is required</p>
+              </div>
+          </div>
+          <br>
+          <div class="col-md-2 mb-3">
+            <label>Room Type</label>
+            <select class="form-control" name="roomtype" [(ngModel)]="room.roomType" required>
+              <option value="NON-AC">NON-AC</option>
+              <option value="AC">AC</option>
+              <option value="DELUX">DELUX</option>
+            </select>
+          </div>
+          <br>
+          <div class="col-md-2 mb-3">
+            <label>Room Price</label>
+            <input type="text" name="price" class="form-control" [(ngModel)]="room.price" #price="ngModel"
+              [ngClass]="{ 'is-invalid': userForm.submitted && roomno.invalid }" required>
+              <div class="invalid-feedback" *ngIf="userForm.submitted && roomno.invalid">
+                <p *ngIf="roomno.errors.required">Room price is required</p>
+              </div>
+          </div>
+      </div>
+    <br>
+      <div class="form-row col-md-2">
+          <button class="btn btn-danger btn-block">Submit</button>
+      </div>
+    </form>
   
+    <br>
 
-  <form class="form-inline">
-    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">FLOOR</label>
-    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-      <option selected>Choose...</option>
-      <option value="1">Ground</option>
-      <option value="2">First</option>
-      <option value="3">Second</option>
-      <option value="4">Third</option>
-      <option value="5">Last</option>
-    </select>
-
-
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
 
-    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">NUMBER</label>
-    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-      <option selected>Choose...</option>
-      <option value="1">101</option>
-      <option value="2">102</option>
-      <option value="3">103</option>
-      <option value="4">104</option>
-      <option value="5">105</option>
-    </select>
-    <br>
-    <br>
-    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">TYPES</label>
-    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-      <option selected>Choose...</option>
-      <option value="1">Single Bedroom</option>
-      <option value="2">Double Bedroom</option>
-      <option value="3">AC</option>
-      <option value="4">Non AC</option>
-    
-    </select>
-    <br>
-    <br>
-    <div class="custom-control custom-checkbox my-1 mr-sm-2">
-      <input type="checkbox" class="custom-control-input" id="customControlInline">
-      <label class="custom-control-label" for="customControlInline">Remember my preference</label>
-    </div>
-  
-    <button type="submit" class="btn btn-primary my-1">Submit</button>
-  </form>
+   </body>
 </div>
+
+
+<router-outlet></router-outlet>

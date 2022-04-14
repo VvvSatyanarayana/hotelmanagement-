@@ -1,0 +1,16 @@
+
+.form-box{
+    top: 100px;
+    width: 700px;
+    height: 500px;
+    position: relative;
+    margin:0% auto;
+    padding: 50px;
+    background-image: url(http://images.freecreatives.com/wp-content/uploads/2016/02/White-Glitter-Wallpaper-.jpg);
+  }
+  .image{
+    background-image: url(https://i2.cdn.turner.com/money/dam/assets/150720120419-club-lounge-fairmont-beijing-gold-room-1100x619.jpg);
+    background-size:cover;
+    height: 1000px;
+    padding: 0px;
+  }

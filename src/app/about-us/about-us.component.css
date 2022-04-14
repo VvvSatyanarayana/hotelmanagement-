@@ -1,5 +1,15 @@
 body{
-    color: rgb(201, 246, 22);
+    color: rgb(15, 15, 15);
     box-shadow: 0 0 20px 9px #faf8f71f;
-    background-color: rgb(90, 108, 108);
+    background-color: rgb(240, 244, 244);
+}
+.overview{
+    background-color: aqua;
+}
+.think{
+    background-color: bisque;
+}
+.entire{
+    background-image: url(https://wallpapercave.com/wp/wp6944127.jpg);
+    background:cover;
 }

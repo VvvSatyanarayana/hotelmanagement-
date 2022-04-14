@@ -1,19 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { Validator } from '@angular/forms';
+
+
+
+
 import { AppComponent } from './app.component';
 import { PaymentComponent } from './payment/payment.component';
-
-
 import { BookingComponent } from './booking/booking.component';
-
 import { RoomsComponent } from './rooms/rooms.component';
 import { Route, Routes } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes:Routes = [
@@ -37,11 +40,14 @@ const routes:Routes = [
     RegisterComponent,
     LoginComponent,
     AboutUsComponent,
-    DashBoardComponent
+    DashBoardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
