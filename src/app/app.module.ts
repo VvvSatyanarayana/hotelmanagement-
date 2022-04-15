@@ -17,6 +17,8 @@ import { LoginComponent } from './login/login.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { HomeComponent } from './home/home.component';
+import { CustomerComponent } from './customer/customer.component';
+import { RoomlistComponent } from './roomlist/roomlist.component';
 
 
 const routes:Routes = [
@@ -41,7 +43,9 @@ const routes:Routes = [
     LoginComponent,
     AboutUsComponent,
     DashBoardComponent,
-    HomeComponent
+    HomeComponent,
+    CustomerComponent,
+    RoomlistComponent
   ],
   imports: [
     BrowserModule,

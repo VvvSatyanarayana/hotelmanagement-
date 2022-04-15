@@ -7,23 +7,23 @@
     
     <br><label style="color: rgb(245, 134, 134);"  for="email">Email address</label>
     <input type="email" class="form-control" id="email" formControlName="email"  required>
-    <small *ngIf="email.invalid && email.touched" style="color:red">*Email Required</small>
+    <small *ngIf="email.invalid && email.touched" style="color:red">*Enter valid Email eg:abc@gmail.com</small>
 
   </div>
   <div class="form-group">
   <br>  <label style="color: rgb(245, 134, 134);" for="mobile">MOBILE</label>
     <input type="number" class="form-control" id="mobile" formControlName="mobile"  required>
-    <small *ngIf="mobile.invalid && mobile.touched" style="color:red">*Mobile Required</small>
+    <small *ngIf="mobile.invalid && mobile.touched" style="color:rgb(247, 13, 13)">*Number must start with 7/8/9 and 10numbers</small>
   </div>
   <div class="form-group">
   <br>  <label style="color: rgb(245, 134, 134);" for="name">NAME</label>
     <input type="text" class="form-control" id="name" formControlName="name" required>
-    <small *ngIf="name.invalid && name.touched" style="color:red">*Name Required</small>
+    <small *ngIf="name.invalid && name.touched" style="color:red">*Name Required and must be Alphabet</small>
   </div>
   <div class="form-group">
   <br>  <label style="color: rgb(245, 134, 134);" for="password">Password</label>
     <input type="password" class="form-control" id="password" formControlName="password" required>
-    <small *ngIf="password.invalid && password.touched" style="color:red">*Password Required</small>
+    <small *ngIf="password.invalid && password.touched" style="color:red">*Password Min 8 characters</small>
   </div>
   <div class="form-group form-check">
    <br> <input type="checkbox" class="form-check-input" id="exampleCheck1">

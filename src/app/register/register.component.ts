@@ -15,9 +15,9 @@ export class RegisterComponent  {
   myform: FormGroup;
   constructor() { 
     this.myform=new FormGroup({
-      name:new FormControl("",[Validators.required]),
+      name:new FormControl("",[Validators.required,Validators.pattern("[a-zA-z]*")]),
       
-      email:new FormControl("",[Validators.required]),
+      email:new FormControl("",[Validators.required,Validators.email]),
       mobile:new FormControl("",[Validators.required,Validators.pattern('([789]{1}\\d{9})')]),
       password:new FormControl("",[Validators.required,Validators.minLength(8)]),
   

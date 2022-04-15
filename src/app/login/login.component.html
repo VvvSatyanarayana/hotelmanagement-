@@ -4,9 +4,9 @@
 <form [formGroup]="loginform" (ngSubmit)="mylogin()">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+    <input type="email" class="form-control" id="exampleInputEmail1"  formControlName="email">
     <div *ngIf="loginform.controls.email.touched && loginform.controls.email.invalid">
-      <small *ngIf="loginform.controls.email.errors.required" style="color:red">Email is Required</small>
+      <small *ngIf="loginform.controls.email.errors.required" style="color:red">*Enter a valid Email</small>
   </div>
   </div>
   <div class="form-group">

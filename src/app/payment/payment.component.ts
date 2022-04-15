@@ -12,7 +12,7 @@ export class PaymentComponent {
     this.myform=new FormGroup({
       cardnumber:new FormControl("",[Validators.required,Validators.pattern("[0-9]*"),Validators.minLength(12)]),
       expiredate:new FormControl("",[Validators.required,Validators.pattern("[0-9]*")]),
-        cvv: new FormControl("",[Validators.required,Validators.pattern("[0-9]*"),Validators.maxLength(4)]),
+        cvv: new FormControl("",[Validators.required,Validators.pattern("[0-9]*"),Validators.maxLength(3)]),
 
       });
   }

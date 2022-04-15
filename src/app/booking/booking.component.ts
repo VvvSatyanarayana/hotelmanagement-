@@ -1,50 +1,48 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { stringify } from 'querystring';
+import { CustomerService } from './customer.service';
+import { Customer } from './customer';
 @Component({
-  selector: 'app-booking',
-  templateUrl: './booking.component.html',
-  styleUrls: ['./booking.component.css']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class BookingComponent {
-
+export class AppComponent {
   myform:FormGroup;
-  constructor() {
+  id:number;
+  name:string="";
+  checkin:string="";
+  checkout:string="";
+  rooms:number;
+  adults:number;
+  children:number;
+  email:string="";
+  phoneno:number;
+  emp:Customer;
+  msg:string;
+  flag:boolean=false;
+  constructor(private customerservice:CustomerService){}
 
-    this.myform=new FormGroup({
-      name:new FormControl("",[Validators.required,Validators.pattern("[a-zA-z]*"),Validators.maxLength(10)]),
-      checkin:new FormControl("",[Validators.required]),
-      checkout:new FormControl("",[Validators.required]),
-      norooms:new FormControl("",[Validators.required,Validators.pattern("[0-9]*")]),
-      noadults:new FormControl("",[Validators.required]),
-      nochildren:new FormControl("",[Validators.required]),
-      email:new FormControl("",[Validators.required,Validators.pattern("[^[a-zA-Z0-9.!#$%&’+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$]")]),
-      number:new FormControl("",[Validators.required,Validators.pattern("[0-9]*")]),
-      });
-      
-   }
-  get name(){
-    return this.myform.get('name');
+  storeD(data1){
+    console.log(data1.value);
+    this.id=data1.value.id;
+    this.name=data1.value.name;
+    this.checkin=data1.value.checkin;
+    this.checkout=data1.value.checkout;
+    this.rooms=data1.value.rooms;
+    this.adults=data1.value.adults;
+    this.children=data1.value.children;
+    this.email=data1.value.email;
+    this.phoneno=data1.value.phoneno;
+    this.emp=new Customer(this.id,this.name,this.checkin, this.checkout,this.rooms,this.adults,this.children, this.email,this.phoneno);
+    this.customerservice.storeData(this.emp)
+    .subscribe(data=>{
+      console.log(data)
+      this.msg=data;
+      this.flag=true;
+
+    })
+    data1.form.reset();
   }
-  get checkin(){
-    return this.myform.get('checkin');
-  }
-  get checkout(){
-    return this.myform.get('checkout');
-  }
-  get norooms(){
-    return this.myform.get('norooms');
-  }
-  get noadults(){
-    return this.myform.get('noadults');
-  }
-  get nochildren(){
-    return this.myform.get('nochildren');
-  }
-  get email(){
-    return this.myform.get('email');
-  }
-  get number(){
-    return this.myform.get('number');
-  }
-  
 }

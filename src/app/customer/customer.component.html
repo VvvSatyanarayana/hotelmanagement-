@@ -1,0 +1,29 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">CHECKIN</th>
+      <th scope="col">CHECKOUT</th>
+      <th scope="col">ROOMS</th>
+      <th scope="col">ADULTS</th>
+      <th scope="col">CHILDREN</th>
+      <th scope="col">EMAIL</th>
+      <th scope="col">PHONENO</th>
+ </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers">
+     <td>{{customer.id}}</td>
+      <td>{{customer.name}}</td>
+       <td>{{customer.checkin}}</td>
+       <td>{{customer.checkout}}</td>
+       <td>{{customer.rooms}}</td>
+       <td>{{customer.adults}}</td>
+       <td>{{customer.children}}</td>
+       <td>{{customer.email}}</td>
+       <td>{{customer.phoneno}}</td>
+</tr>
+    
+  </tbody>
+</table>
